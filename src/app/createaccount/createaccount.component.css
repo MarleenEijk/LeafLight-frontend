@@ -1,0 +1,69 @@
+.createaccount {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 8em;
+    color: #030303;	
+}
+
+.createaccount p {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.createaccount .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.createaccount input {
+    width: 18%;
+    height: 3em;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #F7F7F7;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #F7F7F7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.createaccount h1 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 41.5%;
+    align-self: flex-start;
+}
+
+.create_button{
+    width: 12%;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #106F53;
+    height: 2.3em;
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 2em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 3em;
+}
+
+.createaccount h3{
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 14.5em;
+    position: absolute;
+    align-self: flex-end;
+    margin-right: 40.9%;
+}
+
+.createaccount h2{
+    font-size: 16px;
+    font-weight: 300;
+}
