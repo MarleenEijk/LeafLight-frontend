@@ -1,56 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-.logo{
+.logo {
     width: 5em;
     height: auto;
     margin-left: 4em;
-    margin-top: 0em;
-    position: relative;
 }
 
-.page_title{
+.page_title {
     font-size: 20px;
     margin-left: 1em;
-    position: absolute;
     margin-top: 1.4em;
     font-weight: 700;
+    position: absolute;
 }
 
-.navbar{
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #F7F7F7;
     height: 4.5em;
     font-family: "Roboto", sans-serif;
-    width: 100%;
+    padding: 0 2em;
     margin-top: -0.5em;
 }
 
-.navbar_menu{
+.navbar_menu {
     font-size: 18px;
     font-weight: 500;
     position: absolute;
-    margin-left: 35em;
-    margin-top: -4.2em;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
 }
 
-.navbar_menu a{
+.navbar_menu a {
     text-decoration: none;
-    margin-left: 4em;
+    margin: 0 2em;
 }
 
-.logout_button{
+.logout_button {
     font-family: "Roboto", sans-serif;
     font-size: 18px;
     border: none;
     background-color: transparent;
     font-weight: 500;
-    position: absolute;
-    margin-left: 98em;
-    margin-top: -3.2em;
+    display: flex;
+    align-items: center;
 }
 
-.logout_icon{
-    width:1em;
+.logout_icon {
+    width: 1em;
     height: auto;
-    position: absolute;
-    margin-top: 0.1em;
-    margin-left: 0.8em;
+    margin-right: 0.5em;
 }
