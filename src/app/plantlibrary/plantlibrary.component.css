@@ -1,10 +1,58 @@
-.title{
+.plant-library {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: #030303;	
+    margin-top: 8em;
+    position: relative;
+}
+
+.title {
     font-size: 26px;
     font-weight: 700;
-    color: #030303;
-    margin-top: 2em;
+    margin-top: -4em;
     margin-left: 4.5em;
-    font-family: 'Roboto', sans-serif;	
+    margin-bottom: 1em;
+    display: inline-block;
+}
+
+.search-container {
+    display: inline-block;
+    width: auto;
+    text-align: right;
+    margin-left: 75em;
+}
+
+.searchbar {
+    padding: 0.5em 2.5em 0.5em 1em;
+    border: none;
+    font-size: 17px;
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 16em;
+    position: relative;
+}
+
+.search-icon {
+    position: relative;
+    top: 0.9em;
+    right: 2em;
+    transform: translateY(-50%);
+    height: 1.2em;
+    width: auto;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.all-boxes{
+    margin-top: 4em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2em;
+    padding-left: 7em;
+    padding-right: 7em;
 }
 
 .plant-box{
@@ -13,5 +61,28 @@
     background-color: #F7F7F7;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-left: 7em;
+    margin-bottom: 5em;
+    position: relative;
+}
+
+
+.plant-image{
+    height: 18em;
+    width: auto;
+    margin-left: 0.5em;
+    margin-top: -3.5em;
+}
+
+.plant-name{
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 0.5em;
+}
+
+.favourite{
+    height: auto;
+    width: 1em;
+    margin-left: 13.5em;
+    margin-top: -2em;
+    position: absolute;
 }

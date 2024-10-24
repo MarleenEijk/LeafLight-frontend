@@ -21,9 +21,10 @@
     height: 4.5em;
     font-family: "Roboto", sans-serif;
     padding: 0 2em;
-    margin-top: -3.3em;
+    margin-top: -8em;
     position: fixed;
     width: 98%;
+    z-index: 1000;
 }
 
 .navbar_menu {
