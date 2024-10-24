@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'login',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  @Output() navigateToCreateAccount = new EventEmitter<void>();
 
+  onSignUpClick() {
+    this.navigateToCreateAccount.emit();
+  }
 }
