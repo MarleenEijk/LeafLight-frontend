@@ -44,18 +44,17 @@
     z-index: 3;
 }
 
-.all-boxes{
+.all-boxes {
     margin-top: 4em;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
     justify-content: flex-start;
     gap: 2em;
     padding-left: 7em;
     padding-right: 7em;
 }
 
-.plant-box{
+.plant-box {
     width: 15em;
     height: 15em;
     background-color: #F7F7F7;
@@ -69,8 +68,9 @@
 .plant-image{
     height: 18em;
     width: auto;
-    margin-left: 0.5em;
     margin-top: -3.5em;
+    object-fit: contain;  
+    margin-left: -1.5em;
 }
 
 .plant-name{
