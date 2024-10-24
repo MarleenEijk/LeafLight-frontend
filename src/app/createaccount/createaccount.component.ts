@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-createaccount',
+  selector: 'createaccount',
   standalone: true,
   imports: [],
   templateUrl: './createaccount.component.html',

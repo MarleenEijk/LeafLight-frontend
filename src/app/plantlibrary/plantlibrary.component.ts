@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-plantlibrary',
+  selector: 'plantlibrary',
   standalone: true,
   imports: [],
   templateUrl: './plantlibrary.component.html',
