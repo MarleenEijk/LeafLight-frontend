@@ -19,11 +19,11 @@ export class CreateaccountComponent {
     user: User = {
       id: 0,
       name: '',
-      email: '',
+      emailaddress: '',
       password: ''
     }
 
     onSubmit() : void{
-      
+      console.log(this.user);
     }
 }
