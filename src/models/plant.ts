@@ -3,7 +3,7 @@ export interface Plant {
     name: string;
     description: string;
     location: string;
-    watering: string;
+    water: string;
     repotting: string;
     toxic: string;
     image: string;

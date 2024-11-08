@@ -1,24 +1,25 @@
 <div class="plant-info">
-    <p class="title">Plant information</p>
-    <div class="return"><img src="assets/images/return.png" alt="back" class="back-icon">Return</div>
-    <div class="plant-box">
-        <img [src]="plant?.image" [alt]="plant?.name" class="plant-image">
-      </div>
-    <div class="plant-information">
-        <div class="plant-title">{{ plant?.name }}</div>
-        <div class="plant-location">Location</div>
-        <div class="plant-water">Water</div>
-        <div class="plant-repotting">Repotting</div>
-        <div class="plant-toxic">Toxic</div>
-        <div class="plant-descritption">Descritption</div>
-    </div>
-
-    <div class="information">
-        <div class="location">{{ plant?.location }}</div>
-        <div class="water">{{ plant?.watering }}</div>
-        <div class="repotting">{{ plant?.repotting }}</div>
-        <div class="toxic">{{ plant?.toxic }}</div>
-        <div class="description">{{ plant?.description }}</div>
-    </div>
+  <p class="title">Plant information</p>
+  <div class="return" (click)="returnToLibrary()">
+      <img src="assets/images/return.png" alt="back" class="back-icon">Return
   </div>
-  
+  <div class="plant-box">
+      <img [src]="plant?.image" [alt]="plant?.name" class="plant-image">
+  </div>
+  <div class="plant-information">
+      <div class="plant-title">{{ plant?.name }}</div>
+      <div class="plant-location">Location</div>
+      <div class="plant-water">Water</div>
+      <div class="plant-repotting">Repotting</div>
+      <div class="plant-toxic">Toxic</div>
+      <div class="plant-descritption">Descritption</div>
+  </div>
+
+  <div class="information">
+      <div class="location">{{ plant?.location }}</div>
+      <div class="water">{{ plant?.water }}</div>
+      <div class="repotting">{{ plant?.repotting }}</div>
+      <div class="toxic">{{ plant?.toxic }}</div>
+      <div class="description">{{ plant?.description }}</div>
+  </div>
+</div>
