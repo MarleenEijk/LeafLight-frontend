@@ -8,12 +8,15 @@ import { Plant } from '../models/plant';
   providedIn: 'root'
 })
 export class PlantService {
-
   private apiUrl = `${environment.apiUrl}/plants`;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
-  getPlants(): Observable<Plant[]>{
+  getPlants(): Observable<Plant[]> {
     return this.http.get<Plant[]>(this.apiUrl);
+  }
+
+  getPlantById(id: number): Observable<Plant> {
+    return this.http.get<Plant>(`${this.apiUrl}/${id}`);
   }
 }

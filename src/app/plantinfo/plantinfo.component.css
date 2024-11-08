@@ -1,0 +1,110 @@
+.plant-info {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: #030303;	
+    margin-top: 8em;
+    position: relative;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: 700;
+    margin-top: -4em;
+    margin-left: 4.5em;
+    margin-bottom: 1em;
+    display: inline-block;
+}
+
+.back-icon{
+    display: inline-block;
+    width: 1em;
+    height: auto;
+    margin-right: 0.5em;
+}
+
+.return{
+    font-size: 22px;
+    font-weight: 500;
+    margin-left: 5.2em;
+}
+
+.plant-box {
+    width: 20em;
+    height: 20em;
+    background-color: #F7F7F7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-left: 7em;
+    margin-top: 3em;
+}
+
+
+.plant-image{
+    height: 23em;
+    width: auto;
+    margin-top: -3.5em;
+    object-fit: contain;  
+    margin-left: 1em;
+}
+
+.plant-information{
+    margin-left: 28em;
+    margin-top: -18em;
+    font-size: 18px;
+}
+
+
+.plant-title{
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+
+.plant-location{
+    margin-bottom: 0.5em;
+}
+
+.plant-water{
+    margin-bottom: 0.5em;
+}
+
+.plant-repotting{
+    margin-bottom: 0.5em;
+}
+
+.plant-toxic{
+    margin-bottom: 0.5em;
+}
+
+.plant-description{
+    margin-bottom: 0.5em;
+}
+
+
+.information{
+    margin-left: 38em;
+    margin-top: -8em;
+    font-size: 18px;
+    padding-right: 7em;
+}
+
+.location{
+    margin-bottom: 0.5em;
+}
+
+.water{
+    margin-bottom: 0.5em;
+}
+
+.repotting{
+    margin-bottom: 0.5em;
+}
+
+.toxic{
+    margin-bottom: 0.5em;
+}
+
+.description{
+    margin-bottom: 0.5em;
+}

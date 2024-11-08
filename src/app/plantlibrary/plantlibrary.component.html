@@ -7,7 +7,7 @@
     </div>
   
     <div class="all-boxes">
-      <div *ngFor="let plant of plants" class="plant-box">
+      <div *ngFor="let plant of plants" class="plant-box" (click)="viewPlantDetails(plant.id)">
         <img [src]="plant.image" [alt]="plant.name" class="plant-image" />
         <p class="plant-name">{{ plant.name }}</p>
         <img src="assets/images/heart.png" alt="favourite" class="favourite" />
