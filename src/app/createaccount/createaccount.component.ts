@@ -25,6 +25,11 @@ export class CreateaccountComponent {
     private router: Router
   ) {}
 
+  isValidEmail(email: string): boolean {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
   onSubmit(): void {
     if (!this.user.name || !this.user.emailaddress || !this.user.password) {
       Swal.fire({
@@ -39,10 +44,22 @@ export class CreateaccountComponent {
       return;
     }
 
+    if (!this.isValidEmail(this.user.emailaddress)) {
+      Swal.fire({
+        title: 'Error',
+        text: 'Please enter a valid email address.',
+        icon: 'error',
+        confirmButtonText: 'OK',
+        customClass: {
+          container: 'swal-custom-font'
+        }
+      });
+      return;
+    }
+
     this.userService.createUser(this.user).subscribe(
       (response) => {
         console.log('Account created successfully:', response);
-
         Swal.fire({
           title: 'Success!',
           text: 'Account created successfully.',
@@ -57,7 +74,6 @@ export class CreateaccountComponent {
       },
       (error) => {
         console.error('Error creating account:', error);
-
         Swal.fire({
           title: 'Error!',
           text: 'Failed to create account. Please try again.',
