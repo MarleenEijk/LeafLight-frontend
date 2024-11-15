@@ -13,7 +13,12 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
 
-  getPlants(): Observable<User[]>{
+  getUsers(): Observable<User[]>{
     return this.http.get<User[]>(this.apiUrl);
    }
+
+   createUser(user: User): Observable<User> {
+    return this.http.post<User>(this.apiUrl, user);
+  }
+  
 }

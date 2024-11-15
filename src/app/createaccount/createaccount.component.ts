@@ -1,6 +1,9 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { User } from '../../models/user';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'createaccount',
@@ -10,20 +13,48 @@ import { User } from '../../models/user';
   styleUrl: './createaccount.component.css'
 })
 export class CreateaccountComponent {
-  @Output() navigateToLogin = new EventEmitter<void>();
+  user: User = {
+    id: 0,
+    name: '',
+    emailaddress: '',
+    password: ''
+  };
 
-  onLoginClick() {
-    this.navigateToLogin.emit();
+  constructor(
+    private userService: UserService,
+    private router: Router,
+    private snackBar: MatSnackBar
+  ) {}
+
+  onSubmit(): void {
+    if (!this.user.name || !this.user.emailaddress || !this.user.password) {
+      this.snackBar.open('All fields are required.', 'Close', {
+        duration: 3000,
+        panelClass: ['error-snackbar'],
+      });
+      return;
+    }
+
+    this.userService.createUser(this.user).subscribe(
+      (response) => {
+        console.log('Account created successfully:', response);
+        this.snackBar.open('Account created! Redirecting to login page.', 'Close', {
+          duration: 3000,
+          panelClass: ['success-snackbar'],
+        });
+        this.router.navigate(['/login']);
+      },
+      (error) => {
+        console.error('Error creating account:', error);
+        this.snackBar.open('Failed to create account. Please try again.', 'Close', {
+          duration: 3000,
+          panelClass: ['error-snackbar'],
+        });
+      }
+    );
   }
 
-    user: User = {
-      id: 0,
-      name: '',
-      emailaddress: '',
-      password: ''
-    }
-
-    onSubmit() : void{
-      console.log(this.user);
-    }
+  onLoginClick(): void {
+    this.router.navigate(['/login']);
+  }
 }

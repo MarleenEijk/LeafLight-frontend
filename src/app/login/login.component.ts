@@ -1,16 +1,20 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'login',
   standalone: true,
-  imports: [],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+  styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  @Output() navigateToCreateAccount = new EventEmitter<void>();
+  constructor(private router: Router) {}
 
-  onSignUpClick() {
-    this.navigateToCreateAccount.emit();
+  onSignUpClick(): void {
+    this.router.navigate(['/create-account']);
+  }
+
+  onLoginClick(): void {
+    this.router.navigate(['/plants']);
   }
 }

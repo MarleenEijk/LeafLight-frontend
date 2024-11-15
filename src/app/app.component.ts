@@ -6,6 +6,8 @@ import { CreateaccountComponent } from './createaccount/createaccount.component'
 import { PlantLibraryComponent } from './plantlibrary/plantlibrary.component';
 import { CommonModule } from '@angular/common';
 import { PlantinfoComponent } from "./plantinfo/plantinfo.component";
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
 
 @Component({
   selector: 'app-root',
@@ -17,20 +19,13 @@ import { PlantinfoComponent } from "./plantinfo/plantinfo.component";
     CreateaccountComponent, 
     PlantLibraryComponent, 
     PlantinfoComponent,
-    CommonModule
+    CommonModule,
+    MatSnackBarModule
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'LeafLight-frontend';
-  showLogin: boolean = true;
-
-  showCreateAccount() {
-    this.showLogin = false;
-  }
-
-  showLoginView() {
-    this.showLogin = true;
-  }
 }
