@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { User } from '../../models/user';
 import { UserService } from '../user.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'createaccount',
   standalone: true,
   imports: [FormsModule],
   templateUrl: './createaccount.component.html',
-  styleUrl: './createaccount.component.css'
+  styleUrls: ['./createaccount.component.css']
 })
 export class CreateaccountComponent {
   user: User = {
@@ -22,15 +22,19 @@ export class CreateaccountComponent {
 
   constructor(
     private userService: UserService,
-    private router: Router,
-    private snackBar: MatSnackBar
+    private router: Router
   ) {}
 
   onSubmit(): void {
     if (!this.user.name || !this.user.emailaddress || !this.user.password) {
-      this.snackBar.open('All fields are required.', 'Close', {
-        duration: 3000,
-        panelClass: ['error-snackbar'],
+      Swal.fire({
+        title: 'Error',
+        text: 'All fields are required.',
+        icon: 'error',
+        confirmButtonText: 'OK',
+        customClass: {
+          container: 'swal-custom-font'
+        }
       });
       return;
     }
@@ -38,17 +42,30 @@ export class CreateaccountComponent {
     this.userService.createUser(this.user).subscribe(
       (response) => {
         console.log('Account created successfully:', response);
-        this.snackBar.open('Account created! Redirecting to login page.', 'Close', {
-          duration: 3000,
-          panelClass: ['success-snackbar'],
+
+        Swal.fire({
+          title: 'Success!',
+          text: 'Account created successfully.',
+          icon: 'success',
+          confirmButtonText: 'OK',
+          customClass: {
+            container: 'swal-custom-font'
+          }
+        }).then(() => {
+          this.router.navigate(['/login']);
         });
-        this.router.navigate(['/login']);
       },
       (error) => {
         console.error('Error creating account:', error);
-        this.snackBar.open('Failed to create account. Please try again.', 'Close', {
-          duration: 3000,
-          panelClass: ['error-snackbar'],
+
+        Swal.fire({
+          title: 'Error!',
+          text: 'Failed to create account. Please try again.',
+          icon: 'error',
+          confirmButtonText: 'Close',
+          customClass: {
+            container: 'swal-custom-font'
+          }
         });
       }
     );
