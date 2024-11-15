@@ -1,13 +1,17 @@
+<form (ngSubmit)="onSubmit()">
 <div class="createaccount">
     <p>Create account</p>
+
     <div class="input-container">
         <h1>Name</h1>
-        <input type="text">
+        <input type="text" name="Name" [(ngModel)]="user.name">
         <h1>Email</h1>
-        <input type="text">
+        <input type="email" name="EmailAddress" [(ngModel)]="user.emailaddress">
         <h1>Password</h1>
-        <input type="text">
+        <input type="password" name="Password" [(ngModel)]="user.password">
     </div>
-    <button class="create_button">Sign up</button>
-    <h2>Already have an account? Login now</h2>
+    <button type="submit"  class="create_button">Sign up</button>
+
+    <h2 (click)="onLoginClick()">Already have an account? Login now</h2>
 </div>
+</form>

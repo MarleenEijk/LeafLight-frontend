@@ -1,34 +1,58 @@
 {
-  "hash": "16706a45",
-  "configHash": "684d73f8",
+  "hash": "46239724",
+  "configHash": "48cae2fe",
   "lockfileHash": "f8671538",
-  "browserHash": "47caeb2a",
+  "browserHash": "8f03b2a5",
   "optimized": {
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "cc3ef218",
+      "needsInterop": false
+    },
+    "@angular/common/http": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/http.mjs",
+      "file": "@angular_common_http.js",
+      "fileHash": "c9b81449",
+      "needsInterop": false
+    },
     "@angular/core": {
       "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
-      "fileHash": "de924a22",
+      "fileHash": "4b216408",
+      "needsInterop": false
+    },
+    "@angular/forms": {
+      "src": "../../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
+      "file": "@angular_forms.js",
+      "fileHash": "1603de2a",
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
-      "fileHash": "e0f201ca",
+      "fileHash": "4097bc40",
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
-      "fileHash": "72d51d5c",
+      "fileHash": "665fa78a",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-FCZ67RR6": {
-      "file": "chunk-FCZ67RR6.js"
+    "chunk-WII57EPS": {
+      "file": "chunk-WII57EPS.js"
     },
-    "chunk-W5QGBK3I": {
-      "file": "chunk-W5QGBK3I.js"
+    "chunk-MHRW3N4O": {
+      "file": "chunk-MHRW3N4O.js"
+    },
+    "chunk-MCO6UI4J": {
+      "file": "chunk-MCO6UI4J.js"
+    },
+    "chunk-RXLE57JX": {
+      "file": "chunk-RXLE57JX.js"
     }
   }
 }
