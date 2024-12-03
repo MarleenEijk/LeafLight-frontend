@@ -43,7 +43,7 @@ export class CreateaccountComponent {
       });
       return;
     }
-
+  
     if (!this.isValidEmail(this.user.emailaddress)) {
       Swal.fire({
         title: 'Error',
@@ -56,27 +56,58 @@ export class CreateaccountComponent {
       });
       return;
     }
-
-    this.userService.createUser(this.user).subscribe(
-      (response) => {
-        console.log('Account created successfully:', response);
-        Swal.fire({
-          title: 'Success!',
-          text: 'Account created successfully.',
-          icon: 'success',
-          confirmButtonText: 'OK',
-          customClass: {
-            container: 'swal-custom-font'
+  
+    // Check if email exists
+    this.userService.checkEmailExists(this.user.emailaddress).subscribe(
+      (exists) => {
+        if (exists) {
+          Swal.fire({
+            title: 'Error',
+            text: 'Email address already exists.',
+            icon: 'error',
+            confirmButtonText: 'OK',
+            customClass: {
+              container: 'swal-custom-font'
+            }
+          });
+          return;
+        }
+  
+        // Proceed to create user if email does not exist
+        this.userService.createUser(this.user).subscribe(
+          (response) => {
+            console.log('Account created successfully:', response);
+            Swal.fire({
+              title: 'Success!',
+              text: 'Account created successfully.',
+              icon: 'success',
+              confirmButtonText: 'OK',
+              customClass: {
+                container: 'swal-custom-font'
+              }
+            }).then(() => {
+              this.router.navigate(['/login']);
+            });
+          },
+          (error) => {
+            console.error('Error creating account:', error);
+            Swal.fire({
+              title: 'Error!',
+              text: 'Failed to create account. Please try again.',
+              icon: 'error',
+              confirmButtonText: 'Close',
+              customClass: {
+                container: 'swal-custom-font'
+              }
+            });
           }
-        }).then(() => {
-          this.router.navigate(['/login']);
-        });
+        );
       },
       (error) => {
-        console.error('Error creating account:', error);
+        console.error('Error checking email:', error);
         Swal.fire({
           title: 'Error!',
-          text: 'Failed to create account. Please try again.',
+          text: 'Failed to verify email. Please try again.',
           icon: 'error',
           confirmButtonText: 'Close',
           customClass: {
@@ -85,8 +116,7 @@ export class CreateaccountComponent {
         });
       }
     );
-  }
-
+  }  
   onLoginClick(): void {
     this.router.navigate(['/login']);
   }
