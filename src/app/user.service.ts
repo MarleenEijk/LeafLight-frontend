@@ -21,4 +21,19 @@ export class UserService {
     return this.http.post<User>(this.apiUrl, user);
   }
   
+  checkEmailExists(email: string): Observable<boolean> {
+    return this.http.get<boolean>(`${this.apiUrl}/exists?email=${email}`);
+  }
+
+  login(email: string, password: string): Observable<User> {
+    const userDto: User = {
+      id: 0,
+      name: '',
+      emailaddress: email,
+      password: password
+    };
+    return this.http.post<User>(`${this.apiUrl}/login`, userDto);
+  }
+  
+  
 }
