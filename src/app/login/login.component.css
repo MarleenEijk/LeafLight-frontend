@@ -67,3 +67,13 @@
     font-size: 16px;
     font-weight: 300;
 }
+
+.error {
+    font-size: 16px !important;
+    color: red;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 12em;
+    font-weight: 300 !important;
+}
