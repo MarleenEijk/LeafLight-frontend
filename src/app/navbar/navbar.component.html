@@ -1,16 +1,16 @@
 <div class="navbar">
-    <div class="navbar_logo">
-        <img src="assets/images/leaflight_logo.png" alt="LeafLight Logo" class="logo"/>
-        <a routerLink="/" class="page_title">LeafLight</a>
-    </div>
-    <div class="navbar_menu">
-      <ul>
-        <a routerLink="/">Home</a>
-        <a routerLink="/plant-library">Plant library</a>
-        <a routerLink="/favourite">Favourite</a>
-      </ul>
-    </div>
-    <div class="logout">
-        <button class="logout_button">Logout <img src="assets/images/logout.png" alt="Logout" class="logout_icon"></button>
-    </div>
+  <div class="navbar_logo">
+    <img src="assets/images/leaflight_logo.png" alt="LeafLight Logo" class="logo"/>
+    <a routerLink="/" class="page_title">LeafLight</a>
+  </div>
+  <div class="navbar_menu" *ngIf="!isLoginOrCreateAccountPage()">
+    <ul>
+      <a routerLink="/">Home</a>
+      <a routerLink="/plant-library">Plant library</a>
+      <a routerLink="/favourite">Favourite</a>
+    </ul>
+  </div>
+  <div class="logout" *ngIf="!isLoginOrCreateAccountPage()">
+    <button class="logout_button" (click)="onLogoutClick()">Logout <img src="assets/images/logout.png" alt="Logout" class="logout_icon"></button>
+  </div>
 </div>
