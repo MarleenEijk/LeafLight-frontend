@@ -27,7 +27,7 @@ export class PlantLibraryComponent implements OnInit {
     this.plantService.getPlants().subscribe(
       (data: Plant[]) => {
         this.plants = data;
-        this.filteredPlants = data; // Initialize filtered plants
+        this.filteredPlants = data;
       },
       (error) => {
         console.error('Error fetching plants:', error);
