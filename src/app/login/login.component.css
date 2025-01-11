@@ -51,7 +51,8 @@
     font-weight: 500;
     margin-top: 2em;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 3   em;
+    margin-top: 3em;
+    cursor: pointer;
 }
 
 .login h3{

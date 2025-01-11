@@ -40,6 +40,7 @@
     text-decoration: none;
     margin: 0 2em;
     color: #030303;	
+    cursor: pointer;
 }
 
 .logout_button {
@@ -52,6 +53,7 @@
     align-items: center;
     color: #030303;	
     margin-right: 4em;
+    cursor: pointer;
 }
 
 .logout_icon {
