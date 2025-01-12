@@ -39,7 +39,8 @@
 .navbar_menu a {
     text-decoration: none;
     margin: 0 2em;
-    color: #030303;	
+    color: #030303;
+    cursor: pointer;	
 }
 
 .logout_button {
