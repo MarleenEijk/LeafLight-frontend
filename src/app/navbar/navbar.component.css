@@ -52,6 +52,7 @@
     align-items: center;
     color: #030303;	
     margin-right: 4em;
+    cursor: pointer;   
 }
 
 .logout_icon {

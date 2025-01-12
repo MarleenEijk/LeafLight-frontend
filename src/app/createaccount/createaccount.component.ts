@@ -19,6 +19,8 @@ export class CreateaccountComponent {
     emailaddress: '',
     password: ''
   };
+  passwordFieldType: string = 'password';
+
 
   constructor(
     private userService: UserService,
@@ -120,4 +122,9 @@ export class CreateaccountComponent {
   onLoginClick(): void {
     this.router.navigate(['/login']);
   }
+
+  togglePasswordVisibility() {
+    this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password';
+  }
+
 }
