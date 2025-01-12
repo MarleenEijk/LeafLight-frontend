@@ -7,10 +7,12 @@
       <h1>Email</h1>
       <input type="email" name="EmailAddress" [(ngModel)]="user.emailaddress" required>
       <h1>Password</h1>
-      <input [type]="passwordFieldType" name="Password" [(ngModel)]="user.password" required>
-      <label>
-        <input type="checkbox" class="password.toggle" (change)="togglePasswordVisibility()"> Show Password
-      </label>
+      <div class="password-container">
+        <input [type]="passwordFieldType" name="Password" [(ngModel)]="user.password" required>
+        <button type="button" (click)="togglePasswordVisibility()">
+          {{ passwordFieldType === 'password' ? 'Show' : 'Hide' }}
+        </button>
+      </div>
     </div>
     <button type="submit" class="create_button">Sign up</button>
     <h2 (click)="onLoginClick()">Already have an account? <span style="color: blue; text-decoration: underline; cursor: pointer;">Login now</span></h2>

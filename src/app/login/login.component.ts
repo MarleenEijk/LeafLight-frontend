@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common'; // Import CommonModule
+import { CommonModule } from '@angular/common';
 import { UserService } from '../user.service';
 import { User } from '../../models/user';
 
@@ -10,12 +10,13 @@ import { User } from '../../models/user';
   standalone: true,
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  imports: [FormsModule, CommonModule] // Add CommonModule to imports
+  imports: [FormsModule, CommonModule]
 })
 export class LoginComponent {
   email: string = '';
   password: string = ''; 
   errorMessage: string = '';
+  passwordFieldType: string = 'password';
   
   constructor(private router: Router, private userService: UserService) {}
 
@@ -36,5 +37,9 @@ export class LoginComponent {
         this.errorMessage = 'Invalid email or password. Please try again.';
       },
     });
+  }
+
+  togglePasswordVisibility() {
+    this.passwordFieldType = this.passwordFieldType === 'password' ? 'text' : 'password';
   }
 }

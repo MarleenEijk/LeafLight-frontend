@@ -5,7 +5,7 @@
     height: 100%;
     font-family: 'Roboto', sans-serif;
     margin-top: 8em;
-    color: #030303;	
+    color: #030303;    
 }
 
 .login p {
@@ -31,6 +31,34 @@
     box-sizing: border-box;
     background-color: #F7F7F7;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.password-container {
+    display: flex;
+    align-items: center;
+    width: 18%;
+}
+
+.password-container input {
+    flex: 1;
+    height: 3em;
+    padding: 10px;
+    border: 1px solid #F7F7F7;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #F7F7F7;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.password-container button {
+    margin-left: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #106F53;
+    color: white;
+    cursor: pointer;
+    height: 3em;
 }
 
 .login h1 {
