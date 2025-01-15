@@ -3,10 +3,10 @@
   <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
   <div class="input-container">
     <h1>Email</h1>
-    <input type="text" [(ngModel)]="email">
+    <input id="email-input" type="text" [(ngModel)]="email">
     <h1>Password</h1>
     <div class="password-container">
-      <input [type]="passwordFieldType" [(ngModel)]="password">
+      <input id="password-input" [type]="passwordFieldType" [(ngModel)]="password">
       <button type="button" (click)="togglePasswordVisibility()">
         {{ passwordFieldType === 'password' ? 'Show' : 'Hide' }}
       </button>
