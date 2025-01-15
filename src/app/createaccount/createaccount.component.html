@@ -3,18 +3,18 @@
     <p>Create account</p>
     <div class="input-container">
       <h1>Name</h1>
-      <input type="text" name="Name" [(ngModel)]="user.name" required>
+      <input id="name-input" type="text" name="Name" [(ngModel)]="user.name" required>
       <h1>Email</h1>
-      <input type="email" name="EmailAddress" [(ngModel)]="user.emailaddress" required>
+      <input id="email-input" type="email" name="EmailAddress" [(ngModel)]="user.emailaddress" required>
       <h1>Password</h1>
       <div class="password-container">
-        <input [type]="passwordFieldType" name="Password" [(ngModel)]="user.password" required>
+        <input id="password-input" [type]="passwordFieldType" name="Password" [(ngModel)]="user.password" required>
         <button type="button" (click)="togglePasswordVisibility()">
           {{ passwordFieldType === 'password' ? 'Show' : 'Hide' }}
         </button>
       </div>
     </div>
     <button type="submit" class="create_button">Sign up</button>
-    <h2 (click)="onLoginClick()">Already have an account? <span style="color: blue; text-decoration: underline; cursor: pointer;">Login now</span></h2>
+    <h2 class="login_button" (click)="onLoginClick()">Already have an account? <span style="color: blue; text-decoration: underline; cursor: pointer;">Login now</span></h2>
   </div>
 </form>
